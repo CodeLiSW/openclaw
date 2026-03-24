@@ -46,6 +46,10 @@ export {
   type MentionTarget,
 } from "./src/mention.js";
 
+// Guard against double-registration when both declarative skills
+// and programmatic registerFull() are triggered
+let registered = false;
+
 export default defineChannelPluginEntry({
   id: "feishu",
   name: "Feishu",
@@ -53,6 +57,11 @@ export default defineChannelPluginEntry({
   plugin: feishuPlugin,
   setRuntime: setFeishuRuntime,
   registerFull(api) {
+    // Prevent duplicate registration from both skills declarative path
+    // and programmatic registerFull() call
+    if (registered) return;
+    registered = true;
+
     registerFeishuSubagentHooks(api);
     registerFeishuDocTools(api);
     registerFeishuChatTools(api);
