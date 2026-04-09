@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "yh-minimax-multimodal-toolkit": {
+      "version": "1.0.0",
+      "installedAt": 1775632564854
+    },
+    "feishu-webhook": {
+      "version": "1.2.4",
+      "installedAt": 1775633402290
+    },
+    "self-improving-agent": {
+      "version": "3.0.12",
+      "installedAt": 1775641489481
+    },
+    "Summarize": {
+      "version": "1.0.0",
+      "installedAt": 1775641589735
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1775641787798
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1775641833541
+    }
+  }
+}
